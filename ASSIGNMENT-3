@@ -1,0 +1,29 @@
+1.Find the names of all customers having 'a' as the second letter in their fnames.
+Ans: select fname,lname from cust where fname like '_a%';
+
+2.Find the lnames of all customers that begin with 's' or 'j'.
+Ans:SELECT lname from cust where lname like 'S%' or lname like 'J%';
+
+3.Find out the customers who stay in an area whose second letter is 'a'.
+Ans: select fname,lname from cust where area like '_a%';
+
+4. Find the list of all customers who stay in area 'da' or area 'mu' or area 'gh'.
+Ans: select fname, lname from cust where area='da' or area='mu' or area='gh';
+
+5. Print the list of the employees whose phone number is grater than the value 5550000.
+Ans: select fname,lname from cust where phone_no>5550000;
+
+6.Print the information from invoice table of customers who have been issued movies in the month of september.
+Ans: select inv_no, cust_id,mv_no from invoice where issue_date like '%-Sep-%';
+
+7.Display the invoice table information for cust_id 'a01' and 'a02'.
+Ans: select inv_no,cust_id,mv_no, issue_date, return_date from invoice where cust_id='a01' or cust_id='a02';
+
+8.Find the movie of type 'action' and 'comedy'.
+Ans: select title from movie where type='Action' or type='Comedy';
+
+9.Find the movies whose price is greater than 150 and less than or equal to 200.
+Ans: select title,price from movie where price>150 and price<=200;
+
+10.Find the movies that cost more than 150 and also find the new cost as orignal cost*15.
+Ans: select title, price, price*15 as new_cost from movie where price>150;

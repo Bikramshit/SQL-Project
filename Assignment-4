@@ -1,0 +1,42 @@
+  1.Calculate the square root of the price of each movie and remain the column as Price_root.
+  Ans: select price,SQRT(price) as Price_root from movie;
+  
+  2.Count the total number of customers.
+  Ans: select COUNT(cust_id) from cust;
+  
+  3.Calculate the total price of all the movies.
+  Ans: select SUM(price) from movie;
+  
+  4.Calculate the average price of all the movie.
+  Ans: select AVG(price) from movie;
+  
+  5.Determine the maximum and minimum movie prices.Rename the title as max_price and min_price respectively.
+  Ans: SELECT MAX(price) as max_price,MIN(price) as min_price from movie; 
+  
+  6.Count the total numbers of movie having price grater than or equal to 150.
+  Ans: select COUNT(mv_no) from movie where price>=150;
+  
+  7.Print the type and average price of each type.
+  Ans: select type, AVG(price) from movie group by type;
+  
+  8.Find the number of movies in each type.
+  Ans: select type,COUNT(mv_no) from movie group by type;
+  
+  9.Count seperately the number of movies in the 'comedy' and 'Thriller' type.
+  Ans: select type, COUNT(mv_no) from movie where type in 'Comedy' or type in 'Thriller' group by type;
+  
+  10. Calculate the average price for each for each type that has maxmimum price of 150.00.
+  Ans: SELECT type, AVG(price) from movie where price<=150.00 group by type;
+  
+  11.Calculate the average price of all movies where type is 'Comedy' or 'Thriller' and price is greater than or equal to 150.00.
+  Ans: select type, AVG(price) from movie where type in 'Comedy' or type in 'Thriller' group by type having AVG(price)>=150.00
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

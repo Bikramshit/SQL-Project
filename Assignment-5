@@ -1,0 +1,8 @@
+1.Find out the movie number which has been issued to Ivan.
+Ans: select mv_no from cust,invoice where invoice.cust_id=cust.cust_id and fname='Ivan';
+
+2.Find the names and movie numbers of all customers who have been issued a movie.
+Ans: select fname, movie.mv_no from cust,invoice,movie where invoice.cust_id=cust.cust_id and invoice.mv_no=movie.mv_no;
+
+3.Select the title,cust_id,mv_no for all the movies that are issued.
+Ans: 
